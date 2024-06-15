@@ -1,0 +1,121 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+
+}
+
+.container
+{
+    top: 5%;
+    position: absolute;
+    perspective: 800px;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cylinder
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    animation: turn 5s linear infinite;
+}
+
+.bottom
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    transform: translateY(calc(100px * var(--i)/50)) rotateX(90deg);
+    border-radius: 50%;
+    background: rgb(calc(30 * var(--i)/10), 100 , 200)      
+}
+
+.bottom:nth-child(101)
+{
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.bottom:nth-child(1)
+{
+    border: 3px solid rgb(0, 0, 0);
+}
+
+@keyframes turn {
+    
+   to
+   {
+    transform: rotate3d(1,1,1,360deg);
+   }
+}
+
+@keyframes shake-vertical {
+			
+    0% {
+        transform:translateY(0);
+    }
+    10% {
+        transform:translateY(-8px);
+    }
+    20% {
+        transform:translateY(8px);
+    }
+    30% {
+        transform:translateY(-8px);
+    }
+    40% {
+        transform:translateY(8px);
+    }
+    50% {
+        transform:translateY(-8px);
+    }
+    60% {
+        transform:translateY(8px);
+    }
+    70% {
+        transform:translateY(-8px);
+    }
+    80% {
+        transform:translateY(6.4px);
+    }
+    90% {
+        transform:translateY(-6.4px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+}
+
+@media screen and (max-width: 767px){
+    .bottom
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    transform: translateY(calc(50px * var(--i)/80)) rotateX(90deg);
+    border-radius: 50%;
+    background: rgb(calc(30 * var(--i)/10), 100 , 200)      
+}
+
+   
+}

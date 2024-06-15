@@ -1,0 +1,384 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: linear-gradient(45deg,#0f0c29,#302b63,#24243e);
+
+}
+
+.container1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    perspective: 800px;
+    perspective-origin: 100px -100px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.bigcube1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: turn2 15s linear infinite;
+}
+
+#front1, #back1, #top1, #bottom1, #left1, #right1
+{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(0, 0, 0);
+    border: 3px solid black;
+}
+
+#front1
+{
+    background-image: url("i1.jfif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: translateZ(75px);
+}
+#back1
+{
+    background-image: url("i2.jfif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: translateZ(-75px) rotateY(180deg);
+}
+#top1
+{
+    background-image: url("i3.jfif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: translateY(-75px) rotateX(90deg);
+}
+#bottom1
+{
+    background-image: url("i4.jfif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: translateY(75px) rotateX(90deg);
+}
+#left1
+{
+    background-image: url("i5.jfif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: translateX(-75px) rotateY(90deg);
+}
+#right1
+{
+    background-image: url("i6.jfif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: translateX(75px) rotateY(-90deg);
+}
+/* ///////////////////////// */
+
+
+.container2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    perspective: 800px;
+    perspective-origin: 100px -100px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.bigcube2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: turn2 15s linear infinite;
+}
+
+#front2, #back2, #top2, #bottom2, #left2, #right2
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, rgb(101, 255, 255), rgb(255, 125, 218));
+    border: 3px solid rgb(255, 143, 192);
+    box-shadow: 0 0 5px rgb(255, 135, 211);
+}
+
+#front2
+{
+    transform: translateZ(25px);
+}
+#back2
+{
+    transform: translateZ(-25px) rotateY(180deg);
+}
+#top2
+{
+    transform: translateY(-25px) rotateX(90deg);
+}
+#bottom2
+{
+    transform: translateY(25px) rotateX(90deg);
+}
+#left2
+{
+    transform: translateX(-25px) rotateY(90deg);
+}
+#right2
+{
+    transform: translateX(25px) rotateY(-90deg);
+}
+
+/* //////////////////////////////////// */
+
+.container3
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    perspective-origin: 100px -100px;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.bigcube3
+{
+   
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: turn2 15s linear infinite;
+   
+}
+
+#top3, #bottom3, #front3, #back3, #left3, #right3
+{
+    position: absolute;
+    background: linear-gradient(45deg,#03001e,#7303c0,#24243e,#fdeff9);
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 3px rgb(255, 255, 255);
+    
+}
+
+
+
+#front3
+{
+    width: 100px;
+    height: 50px;
+    transform: translateZ(25px);
+}
+
+#back3
+{
+    width: 100px;
+    height: 50px;
+    transform: translateZ(-25px) rotateY(180deg);
+}
+
+#top3
+{
+    width: 100px;
+    height: 50px;
+    transform: translateY(-25px) rotateX(90deg);
+}
+
+#bottom3
+{
+    width: 100px;
+    height: 50px;
+    transform: translateY(25px) rotateX(-90deg);
+}
+
+#left3
+{
+    width: 50px;
+    height: 50px;
+    transform: translateX(-50px) rotateY(90deg);
+}
+#right3
+{
+    width: 50px;
+    height: 50px;
+    transform: translateX(50px) rotateY(-90deg);
+}
+
+/* //////////////////////////////////// */
+
+.container4
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    perspective: 800px;
+    position: absolute;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.bigcube4
+{
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: turn 15s linear infinite;
+}
+
+#front4, #back4, #left4, #right4
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(#00ff95, #0a311a);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    
+}
+
+#bottom4
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    transform: translateY(21px) rotateX(90deg);
+}
+
+#front4
+{
+    transform: rotateY(calc(90deg * 0)) translateZ(13px) rotateX(30deg);
+}
+#back4
+{
+
+    transform: rotateY(calc(90deg * 1)) translateZ(13px) rotateX(30deg);
+}
+#left4
+{
+
+    transform: rotateY(calc(90deg * 2)) translateZ(13px) rotateX(30deg);
+}
+#right4
+{
+
+    transform: rotateY(calc(90deg * 3)) translateZ(13px) rotateX(30deg);
+}
+
+
+/* /////////////////////////////////////// */
+
+
+.container5
+{
+    position: absolute;
+    perspective: 800px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bigcube5
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    animation: turn2 5s linear infinite;
+}
+
+.bottom
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    transform: translateY(calc(50px * var(--i)/90)) rotateX(90deg);
+    border-radius: 50%;
+    background: rgb(calc(30 * var(--i)/10), 100 , 200)      
+}
+
+.bottom:nth-child(101)
+{
+    border: 3px solid rgb(255, 157, 229);
+}
+
+.bottom:nth-child(1)
+{
+    border: 3px solid rgb(255, 157, 229);
+}
+
+
+
+.container1.active ~ .container2
+{
+    transform: translateX(200px) ;
+}
+
+.container1.active ~ .container3
+{
+    transform: translateX(-200px);
+}
+
+
+.container1.active ~ .container4
+{
+    transform: translateY(-200px);
+}
+.container1.active ~ .container5
+{
+    transform: translateY(200px);
+}
+
+@keyframes turn
+{
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes turn2
+{
+    to{
+        transform: rotate3d(1,1,1,360deg);
+    }
+}
